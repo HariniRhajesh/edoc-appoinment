@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:"Poppins",sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(img/h5.jpg) ;
+                background-size: cover;
+                background-position: center;
+        }
+        .alert-danger {
+                background-color: #f44336;
+                color: white;
+                padding: 15px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                font-size: 20px;
+                text-align: center;
+            }
+            .alert-correct {
+                background-color:lawngreen;
+                color:navy;
+                padding: 15px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                font-size: 20px;
+                text-align: center;
+            }
+        .wrapper_class {
+            background-attachment: fixed;
+                width:650px;
+                background: transparent;
+                color: rgb(14, 1, 48);
+                border:2px solid rgba(20, 20, 20, 0.8);
+                backdrop-filter: blur(20px);
+                box-shadow:15px 15px 80px rgb(28, 1, 90);
+                border-radius: 10px;
+                padding:30px 40px;
+                font-size: 20px;
+                height: 600px; /* Set a fixed height for the container */
+            overflow: auto; /* Make it scrollable */
+        }
+        .wrapper_class .input-box{
+                width: 100%;
+                height: 50px;
+                position: relative;
+                margin: 30px 0;
+                border-width: 1px;
+                border-color: black;
+            }
+            .input-box input,select{
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                border: none;
+                outline: none;
+                border: 2px solid rgba(0, 0, 0, 0.2);
+                border-radius: 40px;
+                font-size: 16px;
+                color:rgb(10, 10, 10);
+                padding: 20px 45px 20px 20px;
+            }
+            .input-box input,select::placeholder{
+                color: rgb(2, 0, 7);
+
+            }
+            .input-box i{
+                position: absolute;
+                right: 20px;
+                top:35%;
+                transform: translate(-50%);
+                font-size: 20px;
+            }
+            .wrapper_class .btn{
+                width:100%;
+                height: 45px;
+                background-color: rgb(14, 1, 48);
+                border: none;
+                outline: none;
+                border-radius: 40px;
+                box-shadow:0 0 10px rgba(0,0,0,.1);
+                cursor: pointer;
+                font-size: 16px;
+                color:#faf7f7;
+                font-weight:600 ;
+            }
+        .input-box label {
+            font-weight: bold;
+        }
+        
+        .input-box input[type="text"],
+        .input-box input[type="number"],
+        .input-box select {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #0d023d;
+            color:black;
+            border-radius: 5px;
+            padding: 0 10px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        
+        .btn {
+            width: 100%;
+            height: 40px;
+            background-color: #023265;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .days-hours .days .input{
+            float: left;
+        }
+        .checkbox-container {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper_class">
+            <form action="check.html" method="post">
+                <p style="font-size:30px;font-weight:2000;"><b>DOCTORS REGISTRATION FORM</b>
+                </p>
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" name="fullname" required>
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Mobile Number" name="mobile_number" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Residential Address" name="residential-address" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Name of hospital/clinic" name="hospital_name" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Hospital Address" name="hospital-address" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Qualifications" name="qualifications" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Awards" name="awards" required>
+                </div>
+                <div class="checkbox-container">
+                    <br><input type="checkbox" id="homeService" name="homeService" value="homeService">
+                    <label for="homeService">Home Services</label>
+                </div>
+                <div class="days-hours" id="homeServices">
+                    <div class="days">
+                        <label style="font-size:18px;">Days</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Monday">Monday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Tuesday">Tuesday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Wednesday">Wednesday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Thursday">Thursday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Friday">Friday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Saturday">Saturday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Sunday">Sunday</label><br>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Hours" name="hours" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Locations served" name="locations" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Consultation fees for home service" name="fees" required>
+                </div>
+                </div>
+                <div class="checkbox-container"><br><br>
+                    <input type="checkbox" id="hospitalConsult" name="hospitalConsult" value="hospitalConsult">
+                    <label for="hospitalConsult">Hospital Consultation</label>
+                </div>
+                <div class="days-hours" id="hospitalConsultation"><div class="days">
+                    <label style="font-size:18px;">Days</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Monday">Monday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Tuesday">Tuesday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Wednesday">Wednesday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Thursday">Thursday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Friday">Friday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Saturday">Saturday</label><br>
+                    <label style="font-size:15px;"><input type="checkbox" name="homeDays[]" value="Sunday">Sunday</label><br>
+                    <div class="input-box">
+                        <input type="text" placeholder="Hours" name="hours" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Consultation fees for hospital appointments" name="fees" required>
+                    </div>
+                <button type="submit" class="btn" name="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+               
